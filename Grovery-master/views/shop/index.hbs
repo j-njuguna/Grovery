@@ -1,0 +1,108 @@
+<div class = "intro">
+		<div class = "inner">
+			<div class = "home-content">
+				<h1>Grovery</h1>
+				<a class="btn" href="#ShopNow">Shop Now</a>
+			</div>
+		</div>
+</div>
+
+
+
+ <div id="map">
+          <script>
+            var map, infoWindow,marker,geocoder;
+            
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 53.29, lng: -8.01},
+                zoom: 6
+              });
+      
+              infoWindow = new google.maps.InfoWindow;
+              marker = new google.maps.Marker({
+                  map: map,
+                  draggable: true,
+                  animation: google.maps.Animation.DROP,
+		  title: "Drag to your location"
+              });
+              geocoder = new google.maps.Geocoder;
+      
+              // Try HTML5 geolocation.
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                  var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                  };
+                  google.maps.event.addListener(marker, 'dragend', function() {
+                    getLocation(marker);
+                  });
+                  map.setCenter(pos);
+                  marker.setPosition(pos);
+                  marker.setMap(map);
+                  map.setZoom(11);
+                }, function() {
+                  handleLocationError(true, infoWindow, map.getCenter());
+                });
+              } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+              }
+            }
+      
+            function getLocation(marker){
+              var newLat = marker.getPosition().lat();
+              var newLng = marker.getPosition().lng();
+              let s = newLat + "," + newLng;
+              console.log(s);
+      
+              return s
+            }
+      
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+              infoWindow.setPosition(pos);
+              infoWindow.setContent(browserHasGeolocation ?
+                                    'Error: The Geolocation service failed.' :
+                                    'Error: Your browser doesn\'t support geolocation.');
+              infoWindow.open(map);
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnOXXomSPknhe_-nDqkj18mEav9kA9zA&callback=initMap">
+          </script>
+    </div>
+
+ 
+<div class="shop-container" id="ShopNow">
+<div class="row">
+    <div class="col-sm-6 col md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success {{#if noMessages}}d-none{{/if}}">
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+
+{{# each products }}
+    <div class="row" style="padding-left:60.25px;">
+        {{# each this }}
+            <div class="col-sm-6 col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="{{ this.imagePath }}" class="card-img-top img-responsive" alt="..." style="height: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ this.title}}</h5>
+                        <p class="description">{{ this.description }}</p>
+                        <div>
+                            <div class="price float-left">${{ this.price }}</div>
+                            <a href="/add-to-cart/{{this._id}}" class="btn btn-success float-right">Add to Shopping Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
+</div> 
+
+
+

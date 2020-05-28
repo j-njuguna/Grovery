@@ -1,0 +1,1270 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*----<<<<<<<<<<<<<<<<<<<<<---/  NAV BAR\-------->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+header
+{
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 0 100px;
+  background: #262626;
+  width: 100%;
+  height: 70px;
+  box-sizing:border-box;
+}
+
+header .logo
+{
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+  font-weight:bold;
+}
+
+header nav
+{
+  float: right;
+  
+}
+
+header nav ul
+{
+  margin:0;
+  padding:0;
+  display:flex;
+  
+}
+
+header nav ul li a
+{
+  height :50px;
+  line-height:50px;
+  padding: 0 20px;
+  color:#32CD32;
+  text-decoration: none;
+  display:block;
+  
+}
+
+header nav ul li a:hover,
+header nav ul li a.active
+{
+  color:#fff;
+  background: green;
+}
+  
+.menu-toggle
+{
+  color: #fff;
+  float: right;
+  line-height:50px;
+  font-size:24px;
+  cursor:pointer;
+  display:none;
+}
+
+@media(max-width: 580px)
+{
+  header
+  {
+    padding:0 20px;
+  }
+
+  .menu-toggle
+{
+  display:block;
+}
+}
+@media(max-width: 990px)
+{
+  header
+  {
+    padding:0 20px;
+  }
+
+
+  header nav
+  {
+    position:absolute;
+    width:100%;
+    
+    height:calc(100vh - 50px);
+    background:	#696969;
+    top:50px;
+    left:-100%;
+    transition:0.5s;
+    
+  }
+  header
+  {
+    padding:0 20px;
+  }
+  header nav.active{
+    left:0;
+    
+  }
+  header nav ul
+  {
+    display:block;
+    text-align:center;
+    
+  }
+  
+  header nav ul li a
+  {
+    borer-bottom:1px solid rgba(0,0,0,0);
+  }
+  
+  
+}
+
+/*----<<<<<<<<<<<<<<<<<<<<<---/ END NAV \ -------->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/*----<<<<<<<<<<<<<<<<<<<---/LAYOUT OF ABOUT-------->>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*left side*/
+.left{
+  width:65%;
+  float:left;
+  margin-left:5px;
+  margin-right:10px;
+}
+
+
+.container h1{
+  font-family: 'Brush Script MT';
+    font-size: 60px;
+    color:green;
+    
+}
+/*----<<<<<<<<<<<<<<<<<---/END OF LAYOUT OF INDEX------>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<---/ OUR STORY \ -------->>>>>>>>>>>>>>>>>>>>>>>>>>*/
+ .ourstory{
+   
+   padding: 20px;
+   margin-top:25px;
+   margin-bottom:30px;
+   width:90%;
+   box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+   background:#fff;
+ }
+
+ .ourstory h3{
+   font-family: 'Brush Script MT';
+    font-size: 30px;
+    color:black;
+   
+ }
+
+.ourstory i{
+  padding:10px;
+  color:green;
+}
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<---/ END STORY \ ------>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<---/ SERVICES \ ------>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.service{
+  
+  margin-top:60px;
+   margin-bottom:40px;
+   padding: 20px;
+   width:90%;
+   box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+   background:#fff;
+}
+
+.service h3{
+   font-family: 'Brush Script MT';
+    font-size: 30px;
+    color:black;
+}
+.service-box{
+  text-align: center;
+  padding:35px 15px;
+  overflow: hidden;
+  position:relative;
+  transition: all 0.3s ease 0s;
+}
+
+.service-box:hover
+{
+  background:#32CD32;
+}
+
+.service-box:before
+{
+  content: "";
+  width:40px;
+  height:40px;
+  border-width:20px;
+  border-style:solid;
+  border-color:white white rgba(1,1,1,0.2) rgba(0,0,0,0.2);
+  position:absolute;
+  top:-40px;
+  right:40px;
+  transition:  all 0.3s ease 0s;
+}
+
+.service-box:hover:before
+{
+  top:0;
+  right:0;
+}
+
+.service-box i
+{
+  display:block;
+  font-size:40px;
+  color:green;
+  margin-bottom:14px;
+}
+
+.service-box .title
+{
+  font-family: 'Apple Chancery';
+  font-size:18px;
+  font-weight:900;
+  color:#545454;
+  line-height:25px;
+  text-transform: capitalize;
+  margin:0;
+  transition: all 0.3s ease 0s;
+}
+
+.service-box .description
+{
+  font-size:15px;
+  color:#545454;
+   text-transform: capitalize;
+  margin:0 0 16px 0;
+  transition: all 0.3s ease 0s;
+}
+
+.service-box:hover i,
+.service-box:hover .title,
+.service-box:hover .description
+{
+  color: white;
+}
+
+/*----<<<<<<<<<<<<<<<<<<<<<---/ END SERVICES \ ----->>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/*----<<<<<<<<<<<<<<<<<<<-----/ HOME PAGE \ -------->>>>>>>>>>>>>>>>>>>>>>>>>*/
+    
+
+.intro{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url(https://images.pexels.com/photos/128402/pexels-photo-128402.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat 50% 50%;
+	display: table;
+	top: 0;
+	background-size: cover;
+}
+.intro .inner{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
+}
+
+.home-content{
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.home-content h1{
+	font-family: 'Muli', sans-serif;
+	color:	white;
+	font-weight:bolder;
+	text-shadow: 0 0 300px #000;
+	font-size: 485%;
+}
+
+.home-content .btn{
+	border: solid 5px !important;
+	border-radius: 9px !important;
+	font-family: 'Oswald', sans-serif !important;
+	color: #F9F3F4 !important;
+	font-size: 135%;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+
+
+}
+.home-content .btn:hover{
+	border-color: #85FF5B !important;
+	color: #85FF5B !important;
+}
+
+/*----<<<<<<<<<<<<<<<<<<<--- /  END HOME  \ -------->>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+/*----------------------------------------------------------*/
+/***********************    MAP     *************************/
+/*----------------------------------------------------------*/
+
+#map{
+    height: 50%;
+ }
+
+
+
+/*----------------------------------------------------------*/
+/***********************SHOPPING CART*************************/
+/*----------------------------------------------------------*/
+
+
+.shop-container{
+  
+  width:90%;
+  padding:70px;
+  margin-left:40px;
+  
+}
+
+/*----------------------------------------------------------*/
+/*******************END CART ********************/
+/*----------------------------------------------------------*/
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<<<<---/ FOOTER  \ ----->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#footer {
+    width: 100%;
+    background-color: #262626;
+    display: block;
+    position:relative;
+    margin-top: 1700px
+   
+}
+
+footer{
+  width: 100%;
+    background-color: #262626;
+    display: block;
+    position:static;
+    bottom:0;
+    margin:0 auto;
+    overflow:hidden;
+    display:flex;
+
+}
+.inner-footer {
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap:wrap;
+    box-sizing: border-box;
+    justify-content:center;
+}
+
+.footer-items {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+h12 {
+    padding: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.footer-items p {
+    color: #fff;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+    font-weight: lighter;
+}
+
+.sign a {
+    padding: 9px;
+    color: #7CFC00;
+    font-weight:bold;
+    font-size: 16px;
+    text-align: left;
+    line-height: 25px;
+    border: 3px solid #7CFC00;
+    border-radius: 10px;
+}
+
+h13 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+h14 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h15 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.borders {
+    height: 2px;
+    width: 40px;
+    background: #7CFC00;;
+}
+
+ul {
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+ul a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+ul a li:hover {
+  
+  text-decoration: none;
+    color: #7CFC00;
+}
+
+ul li {
+    margin: 10px 0;
+    height: 25px;
+}
+
+li i {
+    margin-right: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media i {
+    height: 15px;
+    width: 15px;
+    margin: 20px 5px;
+    padding: 10px;
+    color: #7CFC00;
+    border-radius: 50%;
+  
+    transition: 0.3s;
+}
+
+.social-media i:hover {
+    background:#7CFC00;
+}
+
+.footer-bottom {
+    padding: 10px;
+    background: #fff;
+    color: #7CFC00;
+    font-size: 12px;
+    position:absolute;
+}
+
+/*media queries*/
+@media only screen and (max-width:750px){
+  header
+  {
+    position:relative;
+  }
+  .section-search{
+    width:100%;
+  }
+  
+  .section-topics{
+    width:100%;
+  }
+
+
+  
+}
+@media screen and (max-width:1085px) {
+ 
+    .footer-items {
+        width: 50%;
+    }
+    .section-search{
+    width:100%;
+  }
+  
+  .section-topics{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .footer{
+    width: 100%;
+  }
+    .footer-items {
+        width: 100%;
+    }
+    
+    .row{
+      width:70%;
+    }
+    .section-search{
+    width:100%;
+  }
+  
+  .section-topics{
+    width:100%;
+  }
+}
+
+
+@media screen and (max-width:1000px) {
+   .team{
+     width:100%;
+   }
+    .row{
+      width:90%;
+    }
+    .section-search{
+    width:100%;
+  }
+  
+  .section-topics{
+    width:100%;
+  }
+}
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<---/ CONTACT IN FOOTER \ --->>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+.form{
+    position: absolute;
+    margin-top:150px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+   
+}
+
+
+input{
+    width :100%;
+    margin:20px 0;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom:2px solid #006400;
+    
+}
+
+#msg {
+    margin-top: 62px;
+}
+
+::-webkit-input-placeholder {
+  margin-left:10px;
+    color: white;
+    font-size : 10px;
+    letter-spacing: 2px;
+    
+}
+
+button{
+    padding:6px 5px;
+    font-size:2px;
+    background: black;
+    border: 4px solid black;
+    border-radius:10px;
+    color:white	;
+    
+    
+  
+}
+/*----<<<<<<<<<<<<<<  /  ENDCONTACT IN  FOOTER  \----->>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*----<<<<<<<<<--<<<<<<<<<<<<-END FOOTER--------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+
+
+
+
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<---//RECIPE PAGE------->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.page-wrapper a:hover {
+    color: green;
+}
+
+.slider-image:hover {
+    color: black;
+}
+
+h1 a {
+    font-family: 'Raleway', sans-serif !important;
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+h2 a {
+    font-family: 'Raleway', sans-serif !important;
+    color: black;
+    margin: 5px;
+}
+
+.post-slider {
+    position: relative;
+    margin-top:10px;
+    background: #fff;
+    box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+}
+
+.slider-title {
+    text-align: center;
+    padding:30px;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 55px;
+    color:green;
+}
+
+.post-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: 	#00FF00;
+    cursor: pointer;
+}
+
+.post-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: 	#00FF00;
+    cursor: pointer;
+}
+
+.post-wrapper {
+    width: 84%;
+    height: 430px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+.post {
+    height: 340px;
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+    background: #fff;
+    padding:0;
+}
+
+.post-info {
+    height: 200px;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+.slider-image {
+    width: 80%;
+    height: 260px;
+    display: block;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 5px;
+}
+
+h5 a {
+    font-size: 17px;
+    color: green;
+}
+
+.post-info i {
+    font-size: 16px;
+}
+
+
+
+.main-content h1 {
+    font-size: 25px;
+}
+
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.main-content {
+    width: 60%;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+}
+
+.content .main-content .post {
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.post-preview .btn {
+    float: right;
+}
+
+.post-preview .btn a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid green;
+}
+
+.post-preview .btn a:hover {
+    background: green !important;
+    color: white !important;
+    transition: .25s;
+}
+
+.post-image {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.post-preview {
+    width: 60%;
+    padding: 10px;
+    float: right;
+}
+
+.recent-post-title {
+    margin: 20px;
+}
+
+
+/*----<<<<<<<<<<<---/  SIDEBAR FOR SEARCH AND TOPICS \ -->>>>>>>>>>>>>>>>>>>>>*/
+
+.sidebar {
+    width: 30%;
+    float: left;
+    height: 300px;
+}
+
+.section-search {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+}
+
+.section-title {
+    margin: 10px 0 10px 0;
+}
+
+.section-search {
+    box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+    margin-top: 80px;
+}
+
+.section-search h2 {
+    font-family: 'Brush Script MT';
+    font-size: 35px;
+}
+
+.section-topics {
+    box-shadow: 1rem 1rem 1rem 1rem #DCDCDC;
+    margin-top:75px;
+    padding:50px;
+}
+
+.section-topics h2 {
+    font-family: 'Brush Script MT';
+    font-size: 35px;
+}
+
+.section-topics ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-topics ul li a {
+    color: green;
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #32CD32;
+    display: block;
+    transition: all 0.3s;
+}
+
+.section-topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+    background:3#3FF33;
+}
+
+.clearfix{
+  margin-top:60px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.btn:hover {
+    color: black !important;
+}
+
+.text-input {
+    padding: .7rem 1rem;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    border: 1px solid#e0e0e0;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', sans-serif;
+}
+
+/*----<<<<<<<<<<<<<<<<<<<<<---//END RECIPES-------->>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<--- / CONTACT PAGE------>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.contact-section{
+  
+  margin-top:15px;
+  background-size:cover;
+  padding:65px 0;
+  overflow:hidden;
+  text-align: center;
+   margin-left:70px;
+   margin-bottom: 55px;
+   margin-right:70px;
+  
+}
+
+.contact-section h19{
+  
+  
+  color:green;
+  font-family: 'Brush Script MT';
+  font-size:45px;
+  
+}
+
+.border{
+  width:100px;
+  height:10px;
+  background: #34495e;
+  margin:40px auto;
+  
+}
+
+.contact-form{
+  max-width:600px;
+  margin:auto;
+  padding:0 10px;
+  overflow:hidden;
+}
+
+.contact-form-text{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  margin:16px 0;
+  border:0;
+  background:#808080;
+  padding: 20px 40px;
+  outline:none;
+  color:	#fff;
+  transition:0.5s;
+  
+}
+
+.contact-form-text:focus{
+  box-shadow:0 0 10px 4px #34495e;
+}
+
+textarea.contact-form-text{
+  resize:none;
+  height:120px;
+  
+}
+
+.contact-form-btn{
+  float:left;
+  background:green;
+  color:#fff;
+  padding:12px;
+  border-radius:20px;
+  cursor:pointer;
+  transition: 0.5s;
+  width:20%;
+}
+
+.contact-form-btn:hover{
+  background:#33FF33;
+}
+
+/*----<<<<<<<<<<<<<<<<<<<<<---//END CONTACT------->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<--- / TEAM PAGE /------>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+ 
+.team-section{
+  margin-top:100px;
+  margin-bottom:100px;
+  overflow:hidden;
+  text-align: center;
+  background:#fff;
+  padding:60px;
+  box-shadow: 1rem 1rem 1rem 1rem #a0a0a033;
+  width:64%;
+  padding: 50px;
+  position:relative;
+  margin-left:270px;
+  
+
+ 
+}
+
+h20{
+  text-transform:uppercase;
+  font-family: 'Brush Script MT';
+  margin-bottom: 60px;
+  font-size:32px;
+  color:green;
+  font-weight:bolder;
+}
+
+.border{
+  display:block;
+  margin:auto;
+  width:160px;
+  height:5px;
+  background:#33FF33;
+  margin-bottom:40px;
+}
+
+.ps{
+  margin-bottom:40px;
+  
+}
+
+.ps a{
+  display:inline-block;
+  margin:0 30px;
+  width:160px;
+  height:160px;
+  overflow:hidden;
+  border-radius:50%;
+  
+}
+
+.ps a img{
+  width:100%;
+  filter:brightness(0.95);
+  transition: 0.4s all;
+}
+ 
+.ps a:hover>img {
+  filter:grayscale(50%);
+}
+
+.name-section{
+  width:600px;
+  margin:auto;
+  font-size:20px;
+  color:black;
+  text-align:center;
+  height:0;
+  overflow:hidden;
+}
+
+.name-section p{
+  font-family: 'Brush Script MT';
+  font-size:30px;
+}
+
+.name-section:target{
+  height:auto;
+}
+.name{
+  display:block;
+  margin-bottom:30px;
+  text-align:center;
+  font-size:22px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*----<<<<<<<<<<<<<<<<<<<<<-----/ END TEAM -------->>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+
+
+/*----<<<<<<<<<<<<<<<<<<<<<-----/  LOG IN \ -------->>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#label-login{
+    background-color: #000 !important;
+
+}
+
+a{
+  text-decoration:none;
+  color:#444444;
+}
+.login-reg-panel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+	text-align:center;
+    width:70%;
+	right:0;left:0;
+    margin:auto;
+    height:400px;
+    background-color: #66ff66;
+}
+.white-panel{
+    background-color: rgba(255,255, 255, 1);
+    height:500px;
+    position:absolute;
+    top:-50px;
+    width:50%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+    box-shadow: 0 0 15px 9px #00000096;
+}
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+.login-reg-panel{
+    color:#B8B8B8;
+}
+.login-reg-panel #label-login, 
+.login-reg-panel #label-register{
+    border:3px solid black;
+    padding:5px 5px;
+    width:100px;
+    display:block;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 18px;
+    background:white;
+    float:right;
+}
+
+
+.login-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    left:0;
+    position:absolute;
+    text-align:left;
+}
+.register-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}
+.right-log{right:50px !important;}
+
+.login-show, 
+.register-show{
+    z-index: 1;
+    display:none;
+    opacity:0;
+    transition:0.3s ease-in-out;
+    color:#242424;
+    text-align:left;
+    padding:50px;
+}
+.show-log-panel{
+    display:block;
+    opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.login-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.login-show a{
+    display:inline-block;
+    padding:10px 0;
+}
+
+
+
+
+
+.register-show input[type="text"], .register-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.register-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: black;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+
+.text1{
+    color:black;
+}
+
+ 
+    
+    
+
+/*----<<<<<<<<<<<<<<<<<<<-----/  END LOG IN -------->>>>>>>>>>>>>>>>>>>>>>>>>*/
+    
+    
+    
+
+
+/* ---------------------------------------------------
+    MAP STYLE
+----------------------------------------------------- */
+
+#map {
+    height: 50%;
+    padding-top: 700px;
+  }
+
+  .thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-group-xs > .btn, .btn-xs {
+    padding  : .25rem .4rem;
+    font-size  : .875rem;
+    line-height  : .8;
+    border-radius : .2rem;
+}
